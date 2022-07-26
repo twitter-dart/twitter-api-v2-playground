@@ -1,3 +1,7 @@
+// Copyright 2022 Kato Shinya. All rights reserved.
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided the conditions.
+
 import 'package:flutter/material.dart';
 
 class PlaygroundView extends StatefulWidget {
@@ -12,6 +16,7 @@ class _PlaygroundViewState extends State<PlaygroundView> {
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: const Text('Playground'),
+          toolbarHeight: 150,
         ),
         body: Padding(
           padding: const EdgeInsets.fromLTRB(10, 30, 10, 30),
@@ -19,7 +24,7 @@ class _PlaygroundViewState extends State<PlaygroundView> {
             children: [
               const Expanded(
                 child: Padding(
-                  padding: EdgeInsets.fromLTRB(300, 100, 300, 30),
+                  padding: EdgeInsets.fromLTRB(300, 50, 300, 30),
                   child: TextField(),
                 ),
               ),
@@ -29,12 +34,7 @@ class _PlaygroundViewState extends State<PlaygroundView> {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(100, 20, 100, 20),
                       child: Column(
-                        children: [
-                          _buildParamField(),
-                          _buildParamField(),
-                          _buildParamField(),
-                          _buildParamField(),
-                        ],
+                        children: _buildParamFields(),
                       ),
                     ),
                   ),
@@ -75,6 +75,15 @@ class _PlaygroundViewState extends State<PlaygroundView> {
           ),
         ),
       );
+
+  List<Widget> _buildParamFields() {
+    final fields = <Widget>[];
+    for (int i = 0; i < 5; i++) {
+      fields.add(_buildParamField());
+    }
+
+    return fields;
+  }
 
   Widget _buildParamField() {
     return const Padding(
