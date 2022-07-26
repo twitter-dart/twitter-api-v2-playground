@@ -1,0 +1,27 @@
+{
+  "createTweet": {
+    "title": "Creation of a Tweet",
+    "method": "POST",
+    "path": "/2/tweets",
+    "scopes": [
+      {
+        "value": "tweet.read"
+      },
+      {
+        "value": "tweet.write"
+      },
+      {
+        "value": "users.read"
+      }
+    ],
+    "fields": [
+      {
+        "name": "text",
+        "description": "Text of the Tweet being created.",
+        "type": "String",
+        "required": true
+      }
+    ],
+    "reference_url": "https://developer.twitter.com/en/docs/twitter-api/tweets/manage-tweets/api-reference/post-tweets"
+  }
+}
