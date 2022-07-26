@@ -3,7 +3,7 @@
 // modification, are permitted provided the conditions.
 
 /// This enum represents the service unit of Twitter API v2.0.
-enum ServiceUnit {
+enum Service {
   /// Tweets Service
   tweets('tweets'),
 
@@ -22,5 +22,5 @@ enum ServiceUnit {
   /// The value
   final String value;
 
-  const ServiceUnit(this.value);
+  const Service(this.value);
 }
