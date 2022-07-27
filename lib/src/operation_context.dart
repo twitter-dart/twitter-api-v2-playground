@@ -9,15 +9,15 @@ import 'package:playground/src/request/operation_id.dart';
 import 'operation/operation.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
-abstract class OperationInterpreter {
-  /// Returns the new instance of [OperationInterpreter].
-  factory OperationInterpreter() => _OperationInterpreter();
+abstract class OperationContext {
+  /// Returns the new instance of [OperationContext].
+  factory OperationContext() => _OperationContext();
 
   /// Returns the operation based on [id].
   Future<Operation> execute(final OperationId id);
 }
 
-class _OperationInterpreter implements OperationInterpreter {
+class _OperationContext implements OperationContext {
   /// The name of mapping file for the operation.
   static const _mappingFileName = 'api_operations.json';
 

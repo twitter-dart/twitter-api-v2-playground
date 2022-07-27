@@ -3,9 +3,6 @@
 // modification, are permitted provided the conditions.
 
 import 'package:flutter/material.dart';
-import 'package:playground/src/request/tweets_method.dart';
-
-import 'operation_interpreter.dart';
 
 class PlaygroundView extends StatefulWidget {
   const PlaygroundView({Key? key}) : super(key: key);
