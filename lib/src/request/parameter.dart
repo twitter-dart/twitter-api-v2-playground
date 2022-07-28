@@ -13,5 +13,18 @@ class Parameter {
   final String name;
 
   /// The value
-  final String value;
+  final String? value;
+
+  @override
+  String toString() => 'Parameter(name: $name, value: $value)';
+
+  @override
+  bool operator ==(covariant Parameter other) {
+    if (identical(this, other)) return true;
+
+    return other.name == name && other.value == value;
+  }
+
+  @override
+  int get hashCode => name.hashCode ^ value.hashCode;
 }

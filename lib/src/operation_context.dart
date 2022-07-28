@@ -26,6 +26,6 @@ class _OperationContext implements OperationContext {
     final jsonString = await rootBundle.loadString(_mappingFileName);
     final Map<String, dynamic> json = jsonDecode(jsonString);
 
-    return Operation.fromJson(json[id.value]);
+    return Operation.fromJson(json[id.code]);
   }
 }
