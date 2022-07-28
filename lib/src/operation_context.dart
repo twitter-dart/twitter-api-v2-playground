@@ -23,7 +23,10 @@ class _OperationContext implements OperationContext {
 
   @override
   Future<Operation> execute(final OperationId id) async {
-    final jsonString = await rootBundle.loadString(_mappingFileName);
+    final jsonString = await rootBundle.loadString(
+      _mappingFileName,
+    );
+
     final Map<String, dynamic> json = jsonDecode(jsonString);
 
     return Operation.fromJson(json[id.code]);
