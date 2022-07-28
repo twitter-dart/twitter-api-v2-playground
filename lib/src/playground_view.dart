@@ -14,14 +14,6 @@ class PlaygroundView extends StatefulWidget {
 
 class _PlaygroundViewState extends State<PlaygroundView> {
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-
-    final a = RequestInterpreter().execute();
-    print(a);
-  }
-
-  @override
   Widget build(BuildContext context) => Scaffold(
         appBar: AppBar(
           title: const Text('Playground'),
